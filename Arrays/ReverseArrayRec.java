@@ -1,7 +1,7 @@
 public class ReverseArrayRec {
     public static void main(String[] args) {
         int arr[] = {1,2,3,4,5};
-        System.out.print("Original Array: ");
+        System.out.print("Original Array:");
         printArray(arr);
         System.out.println();
 
