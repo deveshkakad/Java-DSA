@@ -45,4 +45,19 @@ public class MaxSumOfSubArray {
         }
         return maxSum;
     }
+
+    static int kadaneAlgo(int arr[]) {
+        int maxSum = 0;
+        int sum = 0;
+
+        for(int i=0;i<arr.length;i++){
+            sum += arr[i];
+            if(sum <= 0){
+                sum =0;
+            }
+            maxSum = Math.max(maxSum, sum);
+        }
+
+        return maxSum;
+    }
 }
