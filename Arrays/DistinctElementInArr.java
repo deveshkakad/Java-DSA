@@ -1,8 +1,11 @@
+import java.util.*;
+
 public class DistinctElementInArr {
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4};
+        int arr[] = {1,2,3,1};
 
-        System.out.println(isDistictElementInArray(arr));
+        //System.out.println(isDistictElementInArray(arr));
+        System.out.println(isDistictElementInArrayOptimized(arr));
     }
 
     static boolean isDistictElementInArray(int arr[]) {
@@ -12,6 +15,18 @@ public class DistinctElementInArr {
                     return false;
                 }
             }
+        }
+        return true;
+    }
+
+    static boolean isDistictElementInArrayOptimized(int arr[]) {
+
+        Set<Integer> st = new HashSet<>(); 
+        for(int i=0;i<arr.length;i++){
+            if(st.contains(arr[i])){
+                return false;
+            }
+            st.add(arr[i]);
         }
         return true;
     }
