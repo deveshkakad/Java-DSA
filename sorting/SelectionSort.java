@@ -1,4 +1,4 @@
-public class InsertionSort {
+public class SelectionSort {
     public static void main(String[] args) {
         int arr[] = {2,1,45,32,5,212};
         insertionSort(arr);
